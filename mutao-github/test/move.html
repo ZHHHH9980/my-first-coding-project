@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>move</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<style>
+		.box {
+			height: 200px;
+			width: 200px;
+			background-color: green;
+			position: absolute;
+	/* 		left: 0;
+	top: 0; */
+		}
+		.btn {
+			width: 100px;
+			height: 30px;
+			margin-top: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box"></div>
+	<button class="btn btn-back">&lt;</button
+	><button class="btn btn-go">&gt;</button>
+
+	<script src="../js/jquery.js"></script>
+	<script src="../js/transition.js"></script>
+	<script src="../js/showHide.js"></script>
+	<script src="../js/move.js"></script>
+	<script>
+		$box = $('#box');
+		$box.move({
+			css3:true,
+			js:false
+		})
+		$('.btn-back').on('click', function () {
+			$box.move('x',200);
+		});
+		$('.btn-go').on('click', function () {
+			$box.move('x', 10);
+		});
+
+		$box.on('move moved', function (e) {
+			console.log(e.type);
+		})
+	</script>
+</body>
+
+</html>

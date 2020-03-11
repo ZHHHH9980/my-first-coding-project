@@ -1,0 +1,14 @@
+{
+  "name": "mutao-github",
+  "version": "0.0.1",
+  "description": "first",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

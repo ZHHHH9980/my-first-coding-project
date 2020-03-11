@@ -1,0 +1,24 @@
+[
+   {
+   	"src": "img/cart/1.png",
+   	"name": "阿迪达斯系列",
+      "price": "345×1"
+   },
+   {
+      "src": "img/cart/2.png",
+      "name": "玉兰油多效修护三部曲套装",
+      "price": "199×2"
+   },{
+      "src": "img/cart/3.png",
+      "name": "Apple iPhone 7",
+      "price": "6188×1"
+   },{
+      "src": "img/cart/4.png",
+      "name": "飞利浦面条机",
+      "price": "659×4"
+   },{
+      "src": "img/cart/5.png",
+      "name": "罗技G29",
+      "price": "2999×1"
+   }
+]

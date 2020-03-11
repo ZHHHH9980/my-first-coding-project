@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>showHide</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<style>
+		body {
+			width: 400px;
+			margin: 0 auto;
+		}
+		.btn {
+			width: 50%;
+			height: 50px;
+		}
+		#box {
+			display: none;
+			width: 400px;
+					    height: 200px ; 
+			background-color: green;
+			overflow: hidden;	
+		}
+		.transition {
+			-o-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-webkit-transition: all 0.5s;
+			transition: all 0.5s;
+		}
+		.fadeOut {
+			opacity: 0;
+			visibility: hidden;
+		}
+		.slideUpDownCollapse {
+			height: 0!important;
+			padding-top: 0!important;
+			padding-bottom: 0!important;
+		}
+		.slideLeftRightCollapse {
+			width: 0!important;
+			padding-left: 0!important;
+			padding-right: 0!important;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn-show" class="btn">显示</button><button 
+	id="btn-hide" class="btn">隐藏</button>
+	<div id="box">
+		<p>123</p>
+		<p>123</p>
+		<p>123</p>
+		<p>123</p>
+	</div>
+	<button class="btn">显示</button>
+<script src="../js/jquery.js"></script>
+<script src="../js/transition.js"></script>
+<script src="../js/showHide.js"></script>
+<script>
+	
+	var $box = $('#box');
+	/*var showHide = window.mt.showHide($box, {
+	  	css: true,
+	  	js: false,
+	  	animate: 'fade'
+	  });*/
+	  $box.showHide({
+	  	css: true,
+	  	js: false,
+	  	animate: 'slideUpDown'
+	  })
+	  /* js.fadeSlideLeftRight.init($box);*/
+	  
+	    $('#btn-show').on('click',function () {
+	    	/*showHide.show();*/
+	    	/*js.fadeSlideLeftRight.show($box);*/
+	    	$box.showHide('show');
+	    });
+        $('#btn-hide').on('click', function () {
+        	/*showHide.hide();*/
+	    	/*js.fadeSlideLeftRight.hide($box);*/
+	    	$box.showHide('hide');
+	    });
+	    //第一个人订阅
+	    $box.on('show shown hide hidden', function (e) {
+	    	console.log(e.type);
+	    	/*if (e.type === 'show') {
+	    		$box.html('<p>准备显示</p>');
+	    	}else if (e.type === 'shown') {
+	    		setTimeout(function () {
+		    	$box.html($box.html() +'<p>已经显示</p>');
+		    },1000);
+	    	}*/
+	    });
+	    //第二个人订阅
+	   /* $box.on('show shown', function (e) {
+	    	if (e.type === 'show') {
+	    		$box.css('background','red');
+	    	}else if (e.type === 'shown') {
+	    		setTimeout(function () {
+		    	$box.css('background','green');
+		    },1000);
+	    	}
+	    });*/
+
+	    
+
+
+</script>
+</body>
+</html>

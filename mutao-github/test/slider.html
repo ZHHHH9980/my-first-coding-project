@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<style>
+		.slider-fade .slider-item {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: none;
+		}
+		.slider-slide .slider-item {
+			position: absolute;
+			left: 100%;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="index-banner">
+		<div class="container">
+			<div class="banner-slider" id="focus-slider">
+				<div class="slider-container">
+					<div class="slider-item fl">
+						<a href="javascript:;" target="_blank"><img class="slider-img" src="../img/focus-slider/loading.gif" data-src="../img/focus-slider/1.png" alt=""></a>
+					</div>
+					<div class="slider-item fl">
+						<a href="javascript:;" target="_blank"><img class="slider-img" src="../img/focus-slider/loading.gif" data-src="../img/focus-slider/2.png" alt=""></a>
+					</div>
+					<div class="slider-item fl">
+						<a href="javascript:;" target="_blank"><img class="slider-img" src="../img/focus-slider/loading.gif" data-src="../img/focus-slider/3.png" alt=""></a>
+					</div>
+					<div class="slider-item fl">
+						<a href="javascript:;" target="_blank"><img class="slider-img" src="../img/focus-slider/loading.gif" data-src="../img/focus-slider/4.png" alt=""></a>
+					</div>
+				</div>
+				<a href="###" class="slider-control slider-control-left">&lt;</a>
+				<a href="###" class="slider-control slider-control-right">&gt;</a>
+
+				<ol class="slider-indicators-wrap">
+					<li class="slider-indicators text-hidden">1</li>
+					<li class="slider-indicators text-hidden">2</li>
+					<li class="slider-indicators text-hidden">3</li>
+					<li class="slider-indicators text-hidden">4</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		window.jQuery || document.write('<script src="js/jquery.js"><\/script>')
+	</script>
+	<!-- <script src="js/jquery.js"></script> -->
+	<script src="../js/transition.js"></script>
+	<script src="../js/showHide.js"></script>
+	<script src="../js/dropdown.js"></script>
+	<script src="../js/search.js"></script>
+	<script src="../js/move.js"></script>	
+	<script src="../js/slider.js"></script>	
+	<script src="../js/index.js"></script>
+	<script>
+		var $focusSlider = $('#focus-slider');
+		$focusSlider.items = {};
+		$focusSlider.itemstotalNum = $('.slider-img').length;
+		$focusSlider.itemsLoadNum = 0;
+	
+		$focusSlider.on('slider-show', $focusSlider.loadItem = function (e, i, elem) {
+
+			if ($focusSlider.items[i] !== 'loaded') {
+				$focusSlider.trigger('loadImg',[i, elem]);
+			}
+		});
+		$focusSlider.on('loadImg', function (e, i, elem) {
+
+			var $img = $(elem).find('.slider-img');
+
+				loadImg($img.data('src'), function (url) {
+		    	   $img.attr('src', url);
+		    	   console.log(i + ":" + e.type);
+		    	   $focusSlider.itemsLoadNum++;
+		    	   $focusSlider.items[i] = 'loaded';
+
+		    	   if ($focusSlider.itemsLoadNum === $focusSlider.itemstotalNum) {
+		    	       $focusSlider.trigger('loadedImg');
+		    	   }
+			    }) 
+		});
+		$focusSlider.on('loadedImg', function () {
+			 $focusSlider.off('slider-show', $focusSlider.loadItem);
+    	   	  console.log('all-loaded')
+		})
+		  
+
+		    function loadImg(url, imageLoad) {
+		    	var image = new Image();
+
+		    	image.onerror = function () {
+		    		console.log('fail loaded from' + url);
+		    		//备用图片
+		    		$img.attr('src', '../img/focus-slider/placeholder.png');
+		    	}
+		    	image.onload = function () {
+		    		imageLoad(url);
+		    	};
+
+		    	image.src = url;
+		    }
+		
+		$focusSlider.slider({
+			css3: true,
+			js:false,
+			animation : 'slide',
+			activeIndex: 1,
+			autoInterval: 0
+		});
+
+		var $todaysSlider = $('#todays-slider');
+		$focusSlider.slider({
+			css3: true,
+			js:false,
+			animation : 'slide',
+			activeIndex: 1,
+			autoInterval: 0
+		});
+	</script>
+</body>
+</html>

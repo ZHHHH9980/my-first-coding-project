@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/iconfont.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!-- 站点导航&&下拉菜单 -->
+	 <div class="nav-site">
+		<div class="container">
+			<ul class="fl">
+				<li class="fl"><a href="javascript:;" class="nav-site-login">亲，请登录</a></li>
+				<li class="fl"><a href="javascript:;" class="nav-site-signup link">免费注册</a></li>
+				<li class="fl"><a href="javascript:;" target="_blank" class="nav-site-mobile link">手机逛慕淘</a></li>
+			</ul>
+			<ul class="fr">
+				<li class="dropdown menu fl" data-active="menu">
+					<a href="###" target="_blank" class="dropdown-toggle link transition">我的慕淘<i class="dropdown-arrow iconfont transition">&#xe641;</i></a>
+					<ul class="dropdown-layer dropdown-left">
+						<li><a href="###" class="menu-item">已买到的宝贝</a></li>
+						<li><a href="###" class="menu-item">我的足迹</a></li>
+					</ul>
+				</li>
+				<li class="dropdown menu fl" data-active="menu">
+				<a href="###" target="_blank" class="dropdown-toggle link transition">收藏夹<i class="dropdown-arrow iconfont transition">&#xe641;</i></a>
+				<ul class="dropdown-layer dropdown-left">
+					<li><a href="###" class="menu-item">收藏的宝贝</a></li>
+					<li><a href="###" class="menu-item">收藏的店铺</a></li>
+				</ul>
+			</li> 
+				<li class="fl"><a href="###" target="_blank" class="nav-site-category link">商品分类</a></li>				
+				<li class="dropdown menu fl" data-active="menu" data-load='js/dropdown-seller.json'>
+					<a href="###" target="_blank" class="dropdown-toggle link transition">卖家中心<i class="dropdown-arrow iconfont transition">&#xe641;</i></a>
+					<ul class="dropdown-layer dropdown-left">
+						<li class="dropdown-loading"></li>
+						<!-- <li><a href="###" target="_blank" class="menu-item">已卖出的宝贝</a></li>
+						<li><a href="###" target="_blank" class="menu-item">出售中的宝贝</a></li>
+						<li><a href="###" target="_blank" class="menu-item">卖家服务市场</a></li>
+						<li><a href="###" target="_blank" class="menu-item">卖家培训中心</a></li>
+						<li><a href="###" target="_blank" class="menu-item">体验中心</a></li> -->
+					</ul>
+				</li>
+				<li class="dropdown menu fl nav-site-service" data-active="menu">
+					<a href="###" target="_blank" class="dropdown-toggle link transition">联系客服<i class="dropdown-arrow iconfont transition">&#xe641;</i></a>
+					<ul class="dropdown-layer dropdown-right">
+						<li><a href="###" class="menu-item">消费者客服</a></li>
+						<li><a href="###" class="menu-item">卖家客服</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+<!-- header 头部 区域 -->
+	<div class="header">
+		<div class="container">
+			<div class="header-logo fl"><a href="###"></a></div>
+			<!-- index-search 搜索区域 -->
+			<div class="header-search fl" id="header-search">
+				<form action="https://s.taobao.com/search" class="search-form">
+					<input type="text" class="input-box" autocomplete="off" name="q" placeholder="please type in"/><input type="submit" class="input-btn" value="搜索"/>
+				</form>
+				<ul class="search-layer">
+					<!-- <li class="search-layer-item">111</li>
+					<li class="search-layer-item">111</li>
+					<li class="search-layer-item">111</li> -->
+				</ul>
+			</div>
+			<!-- header-cart 头部购物车区域 -->
+			<div class="header-cart dropdown fr" id="cart-dropdown" data-active="cart" data-load="js/cart.json">
+				<div class="dropdown-toggle">
+					<i class="cart-icon iconfont icon-arrowdown">&#xe602;</i>
+					<span class="cart-text">购物车</span>
+					<i class="cart-line">|</i>
+					<i class="dropdown-arrow iconfont transition icon-cart">&#xe641;</i>
+				</div>
+				<div class="dropdown-layer dropdown-right">
+					<img class="imgLoad" src="img/loading.gif">
+					<!-- <p class="cart-layer-title">最新加入的商品</p>
+					<div class="cart-list">
+						<div class="dropdown-item cart-item">
+							<img class="fl" src="img/cart/1.png" alt="">
+							<div class="cart-item-intro">
+								<p class="cart-item-name ">阿迪达斯系列</p>
+								<p class="cart-item-price"><b>￥354×1</b></p>
+							</div>
+							<a href="##" class="cart-item-close fr">×</a>
+						</div>
+					
+					</div> -->
+					<!-- <div class="cart-total">
+						<span class="cart-total-num">共 <b>0</b> 件商品</span>
+						<span class="cart-total-price">共计<b>￥0.00</b></span>
+						<div class="cart-btn fr">去购物车</div>
+					</div> -->
+				</div>
+			</div>
+
+		</div>
+	</div>
+<!-- nav-link 站点链接区域 -->
+	<div class="nav-link">
+		<div class="container">
+			<a href="###" class="navLink">数码城</a
+			><a href="###" class="navLink">天黑黑</a
+			><a href="###" class="navLink">团购</a
+			><a href="###" class="navLink">发现</a
+			><a href="###" class="navLink">二手特价</a
+			><a href="###" class="navLink">名品汇</a>
+		</div>
+	</div>
+<!-- banner 首页广告区域 -->
+	<div class="banner">
+		<div class="container">
+			<!-- 左侧商品分类区域 -->
+			<div class="banner-category fl">
+				<div class="banner-category-title">
+					<a href="###" class="title-name fl">
+					<ul class="title-logo fl">
+						<li class="title-logo-dot fl"></li
+						><li class="title-logo-dot fl"></li
+						><li class="title-logo-dot fl"></li
+						><li class="title-logo-dot fl"></li
+						><li class="title-logo-dot fl"></li
+						><li class="title-logo-dot fl"></li
+						><li class="title-logo-dot fl"></li
+						><li class="title-logo-dot fl"></li
+						><li class="title-logo-dot fl"></li>
+					</ul>商品分类</a>
+				</div>
+				<ul class="banner-category-content">
+					<li class="banner-category-item category-dropdown" data-load= "js/category.detail-json/category-detail-1.json">
+						<a href="###" class="item-name">家用电器<i class="item-arrow fr">&gt;</i>
+						</a>
+						<div class="detail dropdown-layer" >
+							<!-- <ul class="detail-content">
+								<li class="detail-content-col">
+									<p class="detail-content-title">标题1</p>
+									<a href="###" class="detail-content-item">项目1</a>
+									<a href="###" class="detail-content-item">项目2</a>
+									<a href="###" class="detail-content-item">项目3</a>
+									<a href="###" class="detail-content-item">项目4</a>
+								</li>
+								<li class="detail-content-col">
+									<p class="detail-content-title">标题1</p>
+									<a href="###" class="detail-content-item">项目1</a>
+									<a href="###" class="detail-content-item">项目2</a>
+									<a href="###" class="detail-content-item">项目3</a>
+									<a href="###" class="detail-content-item">项目4</a>
+								</li>
+							</ul> -->
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-2.json">
+							<a href="###" class="item-name">电脑、办公手机、运营商
+								<i class="item-arrow fr">&gt;</i>
+							</a>							
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-3.json">
+							<a href="###" class="item-name">电脑、办公<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-4.json">
+							<a href="###" class="item-name">家居、家具、家装、厨具<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-5.json">
+							<a href="###" class="item-name">男装、女装、童装、内衣<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-6.json">
+							<a href="###" class="item-name">化妆、清洁、宠物<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-7.json">
+							<a href="###" class="item-name">运动户外、钟表<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-8.json">
+							<a href="###" class="item-name">汽车、汽车用品<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-9.json">
+							<a href="###" class="item-name">母婴、玩具乐器<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-10.json">
+						<a href="###" class="item-name">食品、酒类、生鲜、特产<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-11.json">
+						<a href="###" class="item-name">食品、酒类、生鲜、特产<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown"  data-load= "js/category.detail-json/category-detail-12.json">
+						<a href="###" class="item-name">食品、酒类、生鲜、特产<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown" data-load= "js/category.detail-json/category-detail-13.json">
+						<a href="###" class="item-name">食品、酒类、生鲜、特产<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+					<li class="banner-category-item category-dropdown" data-load= "js/category.detail-json/category-detail-14.json">
+						<a href="###" class="item-name">食品、酒类、生鲜、特产<i class="item-arrow fr">&gt;</i></a>
+						<div class="detail dropdown-layer">
+							<img src="img/loading.gif" alt="">
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- 中间slider幻灯片 -->
+			<div class="banner-slider fl" id="banner-slider">
+				<div class="slider-container">
+					<div class="slider-item fl">
+						<a href="javascript:;" target="_blank"><img class="slider-img" src="img/focus-slider/loading.gif" data-src="img/focus-slider/1.png" alt=""></a>
+					</div>
+					<div class="slider-item fl">
+						<a href="javascript:;" target="_blank"><img class="slider-img" src="img/focus-slider/loading.gif" data-src="img/focus-slider/2.png" alt=""></a>
+					</div>
+					<div class="slider-item fl">
+						<a href="javascript:;" target="_blank"><img class="slider-img" src="img/focus-slider/loading.gif" data-src="img/focus-slider/3.png" alt=""></a>
+					</div>
+					<div class="slider-item fl">
+						<a href="javascript:;" target="_blank"><img class="slider-img" src="img/focus-slider/loading.gif" data-src="img/focus-slider/4.png" alt=""></a>
+					</div>
+				</div>
+				<a href="###" class="slider-control slider-control-left">&lt;</a>
+				<a href="###" class="slider-control slider-control-right">&gt;</a>
+
+				<ol class="slider-indicators-wrap">
+					<li class="slider-indicators text-hidden">1</li>
+					<li class="slider-indicators text-hidden">2</li>
+					<li class="slider-indicators text-hidden">3</li>
+					<li class="slider-indicators text-hidden">4</li>
+				</ol>
+			</div>
+			<!-- 右侧新闻区域 -->
+			<div class="banner-news fl">
+				<div class="banner-news-title">慕快报<a href="###" class="more fr">更多 &gt;</a>
+				</div>
+				<ul>
+					<li class="banner-news-item">
+						<a href="###"><b>[公告]</b> 慕多多启用新客服电话</a>
+					</li>
+					<li class="banner-news-item">
+						<a href="###"><b>[公告]</b> 慕多多启用新客服电话</a>
+					</li>
+					<li class="banner-news-item">
+						<a href="###"><b>[公告]</b> 慕多多启用新客服电话</a>
+					</li>
+					<li class="banner-news-item">
+						<a href="###"><b>[公告]</b> 慕多多启用新客服电话</a>
+					</li>
+					<li class="banner-news-item">
+						<a href="###"><b>[公告]</b> 慕多多启用新客服电话</a>
+					</li>
+				</ul>
+			</div>
+			<div class="banner-link fl">
+				<div class="banner-link-content">
+					<a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe604;</p>
+						<p class="banner-link-text">话费</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe640;</p>
+						<p class="banner-link-text">机票</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe694;</p>
+						<p class="banner-link-text">电影票</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe66a;</p>
+						<p class="banner-link-text">游戏</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe626;</p>
+						<p class="banner-link-text">彩票</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe64d;</p>
+						<p class="banner-link-text">加油卡</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe61c;</p>
+						<p class="banner-link-text">酒店</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe648;</p>
+						<p class="banner-link-text">火车票</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe6a9;</p>
+						<p class="banner-link-text">众筹</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe600;</p>
+						<p class="banner-link-text">理财</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe602;</p>
+						<p class="banner-link-text">礼品卡</p>
+					</a
+					><a href="#" class="banner-link-item">
+						<p class="banner-link-icon iconfont">&#xe600;</p>
+						<p class="banner-link-text">多点金</p>
+					</a>
+				</div>
+			</div>
+			<div class="banner-adv fl">
+				<a href="###" class="banner-adv-logo"></a>
+			</div>
+		</div>
+	</div>
+<!-- todays 今日推荐商品区域 -->
+	<div class="todays">
+		<div class="container">
+			<div class="todays-slider" id="todays-slider">
+				<div class="slider-container">
+					<div class="slider-item fl">
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/1.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/2.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/3.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/4.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/5.png" alt=""></a>
+					</div>
+					<div class="slider-item fl">
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/6.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/7.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/8.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/9.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/10.png" alt=""></a>
+					</div>
+					<div class="slider-item fl">
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/11.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/12.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/13.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/14.png" alt=""></a>
+						<a href="javascript:;" class= "fl" target="_blank"><img class="slider-img" src="img/todays-slider/loading.gif" data-src="img/todays-slider/15.png" alt=""></a>
+					</div>
+				</div>
+				<a href="###" class="slider-control slider-control-left">&lt;</a>
+				<a href="###" class="slider-control slider-control-right">&gt;</a>
+
+			</div>
+		</div>
+	</div>
+	
+<!-- floor 1 -->
+	<div class="floor" data-active="floor" data-load= "js/floorData.json">
+		<div class="container">
+            <img src="img/floor-loading.gif" alt="">
+            <!-- <div class="floor-title">
+                <div class="fl">
+                    <span class="floor-num">1F</span>
+                    <span class="floor-title-name">精品护肤</span>
+                </div>
+                <div class="floor-tab-toggle fr">
+                    <a href="###" class="floor-toggle-item">综合</a>
+                    <i class="floor-tab-line">|</i>
+                    <a href="###" class="floor-toggle-item">干果</a>
+                    <i class="floor-tab-line">|</i>
+                    <a href="###" class="floor-toggle-item">米面粮油</a>
+                </div>
+            </div>  
+            <div class="floor-body">
+                <ul class="floor-panel">
+                    <li class="fl floor-goods-item">
+                        <a href="##">
+                            <img src="img/floor/loading.gif" data-src="img/floor/2/1/1.png" alt="" class="floor-img">
+                            <p class="floor-goods-name">剑南春 水晶剑 52° 整箱装白酒500ml*6瓶 口感浓香型</p>
+                            <p class="floor-goods-price">169</p>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div> -->
+		</div>
+	</div>
+<!-- floor 2 -->
+    <div class="floor" data-active="floor" data-load= "js/floorData.json">
+        <div class="container"> 
+            <img src="img/floor/floor-loading.gif" alt="" >
+           <!--  <div class="floor-title">
+               <div class="fl">
+                   <span class="floor-num">2F</span>
+                   <span class="floor-title-name">智能手机</span>
+               </div>
+               <div class="floor-tab-toggle fr">
+                   <a href="###" class="floor-toggle-item">综合</a>
+                   <i class="floor-tab-line">|</i>
+                   <a href="###" class="floor-toggle-item">干果</a>
+                   <i class="floor-tab-line">|</i>
+                   <a href="###" class="floor-toggle-item">米面粮油</a>
+               </div>
+           </div>  
+           <div class="floor-body">
+               <ul class="floor-panel">
+                   <li class="fl floor-goods-item">
+                       <a href="##">
+                           <img src="img/floor/loading.gif" data-src="img/floor/3/1/1.png" alt="" class="floor-img">
+                           <p class="floor-goods-name">剑南春 水晶剑 52° 整箱装白酒500ml*6瓶 口感浓香型</p>
+                           <p class="floor-goods-price">169</p>
+                       </a>
+                   </li>
+                  
+               </ul>
+           </div> -->
+        </div>
+    </div>
+<!-- floor 3 -->
+<div class="floor" data-active="floor" data-load= "js/floorData.json">
+    <div class="container">
+        <img src="img/floor-loading.gif" alt="">
+
+    </div>
+</div>
+<!-- floor 4 -->
+<div class="floor" data-active="floor" data-load= "js/floorData.json">
+    <div class="container">
+        <img src="img/floor-loading.gif" alt="">
+
+    </div>
+</div>
+<!-- floor 5 -->
+<div class="floor" data-active="floor" data-load= "js/floorData.json">
+    <div class="container">
+        <img src="img/floor-loading.gif" alt="">
+
+    </div>
+</div>
+<!-- footer区域 -->
+	<div class="footer" id="footer">
+		<div class="container">
+			<div class="footer-content">
+				<img src="img/footer-loading.gif" alt="">
+				<!-- <a href="###" class="footer-link">关于慕多多</a>
+				<a href="###" class="footer-link">合作伙伴</a>
+				<a href="###" class="footer-link">联系我们</a>
+				<p class="copyright">2020 imooc.com All Rights Reserve</p> -->
+			</div>
+		</div>
+	</div>
+<!-- elevator -->
+	 <div class="elevator">
+	 	<div class="elevator-wrap">
+	 		<div class="elevator-item">
+			 	<a href="##">F1</a>
+			 	<a href="##" class="ele-text">服饰</a>
+			 </div>
+		</div>
+	 	<div class="elevator-wrap">
+	 		<div class="elevator-item">
+			 	<a href="##">F2</a>
+			 	<a href="##" class="ele-text">护肤</a>
+			 </div>
+		</div>
+	 	<div class="elevator-wrap">
+	 		<div class="elevator-item">
+		 	<a href="##">F3</a>
+		 	<a href="##" class="ele-text">手机</a>
+		 </div>
+		</div>
+	 	<div class="elevator-wrap">
+	 		<div class="elevator-item">
+		 	<a href="##">F4</a>
+		 	<a href="##" class="ele-text">电器</a>
+		 </div>
+		</div>
+	 	<div class="elevator-wrap">
+	 		<div class="elevator-item">
+		 	<a href="##">F5</a>
+		 	<a href="##" class="ele-text">电脑</a>
+		 </div>
+		</div>
+	 </div>
+<!-- toolbar -->
+    <div class="toolbar">
+    	<a href="##" class="toolbar-item">
+    		<i class="tool-icon iconfont transition">&#xe60b;</i>
+    		<span class="tool-text transition">消息</span>
+    	</a>
+    	<a href="##" class="toolbar-item">
+    		<i class="tool-icon iconfont transition">&#xe589;</i>
+    		<span class="tool-text transition">购物车</span>
+    	</a>
+    	<a href="##" class="toolbar-item">
+    		<i class="tool-icon iconfont transition">&#xe6a9;</i>
+    		<span class="tool-text transition">收藏</span>
+    	</a>
+    	<a href="##" class="toolbar-item">
+    		<i class="tool-icon iconfont transition">&#xe61a;</i>
+    		<span class="tool-text transition">历史记录</span>
+    	</a>
+    	<a href="##" class="toolbar-item" id="backtoTop">
+    		<i class="tool-icon iconfont transition">&#xe6f8;</i>
+    		<span class="tool-text transition">回到顶部</span>
+    	</a>
+    </div>
+	<script src="js/jquery.js"></script> 
+	<script >
+		window.jQuery || document.write('<script src="../js/jquery.js"><\/script>')
+	</script>
+	<!-- <script src="http://mat1.gtimg.com/libs/jquery/1.12.0/jquery.js"></script> -->
+	<script src="js/transition.js"></script>
+	<script src="js/showHide.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/search.js"></script>
+	<script src="js/move.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/tab.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
